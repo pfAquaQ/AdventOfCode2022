@@ -1,0 +1,3 @@
+input1:read0 hsym `$"q3.txt";
+valueDict:(.Q.a,.Q.A)!(1+til 52);
+sum valueDict raze distinct each raze each {(first x) where each =/:[first x;last x]} each {("j"$(count x) % 2) cut x} each input1
