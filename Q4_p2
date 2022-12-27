@@ -1,0 +1,2 @@
+input1: read0 hsym `$"q4.txt"
+sum {[x] $[((x[3] >= x[0]) & x[2] <= x[1]) | ((x[1] >= x[2]) & x[0] <= x[3]);:1;:0]} each {-7h$string x} each `${("-" vs first x),("-" vs last x)} each {"," vs x} each input1
