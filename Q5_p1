@@ -1,0 +1,14 @@
+input1:read0 hsym `$"q5.txt";
+input2:{input1[til 9;(4*x)+til 4]} each til 9
+input3:raze each input2
+{@[input3[x];((input3[x]) ss "]"), (input3[x] ss "[");:;" "]} each til 9
+
+//More complicated but cool way 
+
+spaceIndex:ss[;" "] each input4
+{input4[x;except[til 36;] spaceIndex[y]]} '[til 9;til 9]
+
+
+//simpler approach
+
+except'[input4;" "]
