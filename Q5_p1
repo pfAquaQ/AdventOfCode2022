@@ -12,3 +12,15 @@ spaceIndex:ss[;" "] each input4
 //simpler approach
 
 except'[input4;" "]
+
+// function to retreive the 3 key numbers that define the crane movement 
+
+getnums:{[x] numE:x ss "e";
+  numF:x ss "f";
+  num1:(til first numF) except til first numE;
+  num1:(1_x[num1]) except " ";
+  numM:last x ss "m";numT:last x ss "t";
+  num2:(til numT) except til numM;
+  num2:(1_x[num2]) except " ";
+  num3:-1#x;`$'"," vs num1,",",num2,",",num3
+  }
